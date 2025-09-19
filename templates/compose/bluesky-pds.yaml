@@ -37,6 +37,7 @@ services:
         chmod 700 /usr/local/bin/pdsadmin.sh && \
         ln -sf /usr/local/bin/pdsadmin.sh /usr/local/bin/pdsadmin
         echo "Creating empty pds.env file to trick pdsadmin, it will work with the environment variables..."
+        touch ${PDS_DATA_DIRECTORY}/pds.env
         echo "Launching PDS..."
         exec node --enable-source-maps index.js
       '
