@@ -36,6 +36,7 @@ services:
         curl -o /usr/local/bin/pdsadmin.sh https://raw.githubusercontent.com/bluesky-social/pds/main/pdsadmin.sh && \
         chmod 700 /usr/local/bin/pdsadmin.sh && \
         ln -sf /usr/local/bin/pdsadmin.sh /usr/local/bin/pdsadmin
+        echo "Creating empty pds.env file to trick pdsadmin, it will work with the environment variables..."
         echo "Launching PDS..."
         exec node --enable-source-maps index.js
       '
